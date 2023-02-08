@@ -1,0 +1,135 @@
+:root {
+    --main-yellow: #e6b05d;
+    --main-blue: #51528b;
+    --main-font: #ae7729;
+    --mian-gray: #beb7ad;
+    --main-white: #fdfdfb;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-blue);
+    align-items: center;
+}
+
+#name {
+    font-size: 64px;
+    font-style: italic;
+    color: var(--main-white);
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 1.5em;
+}
+
+.btn-nav {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--main-white);
+    margin-bottom: 0.3em;
+}
+
+.btn-nav:hover {
+    cursor: pointer;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 48px; */
+    box-sizing: border-box;
+    margin: 30px;
+}
+
+.left-intro {
+    width: 80%;
+    padding-right: 4em;
+}
+
+.left-intro > p:first-child {
+    font-size: 48px;
+    color: var(--main-font);
+    margin-top: 0;
+    margin-bottom: 0.8em;
+}
+
+.left-intro > p:nth-child(2) {
+    font-size: 24px;
+    color: darkgray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.left-intro > p:nth-child(3) {
+    font-size: 30px;
+    color: var(--mian-gray);
+    margin-top: 0;
+    
+}
+
+.left-intro > p:nth-child(4) {
+    font-size: 20px;
+    color: var(--mian-gray);
+}
+
+.btn-group {
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+}
+
+.btn-group button {
+    font-size: 18px;
+    border: 2px solid var(--main-blue);
+    border-radius: 20px;
+    background-color: var(--main-white);
+    color: var(--main-blue);
+    padding: 0.7em 1.5em;
+}
+
+.btn-group button:last-child {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.right-image {
+    margin-left: 3em;
+    width: 50%;
+}
+
+img {
+    width: min(550px, 70%);
+    margin-left: 8em;
+}
+
+.footer {
+    /* margin-top: auto; */
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-yellow);
+}
+
+.footer p {
+    margin: 0.5em auto;
+    color: var(--main-white);
+}
