@@ -19,9 +19,7 @@ const createMenu = () => {
     }
 
     const content = document.querySelector('#content');
-    const main_content = document.querySelector('.main-content');
-    content.removeChild(main_content);
-    content.insertBefore(menu, content.lastChild);
+    content.replaceChild(menu, content.children[1]);
 }
 
 export default createMenu;

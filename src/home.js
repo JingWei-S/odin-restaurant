@@ -42,7 +42,11 @@ const getHome = () => {
 
   main_content.appendChild(intro_div);
 
-  return main_content
+  const content = document.querySelector('#content');
+  if (document.querySelector('.menu') || document.querySelector('.contact')) {
+    content.removeChild(content.children[1]);
+  }
+  content.insertBefore(main_content, content.lastChild);
 };
 
 export default getHome;

@@ -17,13 +17,31 @@ const nav_home = document.createElement('button');
 nav_home.textContent = 'Home';
 nav_home.classList.add('btn-nav');
 nav_home.classList.add('active');
+nav_home.addEventListener("click", (e) => {
+    for (const btn of e.target.parentNode.children) {
+        if (btn === e.target) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+
+    }
+    getHome();
+} );
 nav_bar.appendChild(nav_home);
 const nav_menu = document.createElement('button');
 nav_menu.textContent = 'Menu';
 nav_menu.classList.add('btn-nav');
 nav_menu.addEventListener("click", (e) => {
+    for (const btn of e.target.parentNode.children) {
+        if (btn === e.target) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+
+    }
     createMenu();
-    e.target.classList.add('active');
 } );
 nav_bar.appendChild(nav_menu);
 const nav_contact = document.createElement('button');
@@ -35,9 +53,9 @@ nav.appendChild(nav_bar);
 
 content.appendChild(nav);
 
-const main_content = getHome();
+// const main_content = getHome();
 
-content.appendChild(main_content);
+// content.appendChild(main_content);
 
 const footer = document.createElement('div');
 footer.classList.add('footer');
@@ -46,3 +64,5 @@ footer_p.textContent = 'Supported by Jing with ❤️';
 footer.appendChild(footer_p);
 
 content.appendChild(footer);
+
+getHome();
