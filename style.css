@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+    /* align-items: center; */
 }
 
 .nav {
@@ -175,4 +176,62 @@ img {
 
 .food-div p {
     margin-top: 0.2em;
+}
+
+
+
+.contact {
+    width: 80%;
+    min-height: 65vh;
+    box-sizing: border-box;
+    padding: 2em;
+    border: 2px solid rgb(169, 169, 169);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-self: center;
+}
+
+.contact::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; 
+}
+
+.contact p {
+    position: relative;
+}
+
+.contact > p:first-child {
+    color: #ae7729;
+    font-size: 48px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.contact > p:not(:first-child) {
+    font-size: 24px;
+    color: rgb(111, 108, 108);
+    margin-bottom: 0;
+}
+
+.opening-hour {
+    width: 30%;
+    padding-left: 2em;
+    font-size: 18px;
+    color: rgb(111, 108, 108);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.opening-hour > p {
+    margin-bottom: 0;
 }
