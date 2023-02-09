@@ -35,9 +35,15 @@ body {
     margin-bottom: 0.2em;
 }
 
-.nav-bar {
+.nav {
     display: flex;
-    gap: 1.5em;
+    gap: 0.5em;
+}
+
+nav {
+    display: flex;
+    gap: 2em;
+    flex-direction: row;
 }
 
 .btn-nav {
@@ -46,6 +52,14 @@ body {
     font-size: 24px;
     color: var(--main-white);
     margin-bottom: 0.3em;
+}
+
+.btn-nav.active {
+    border-bottom: 2px solid white;
+}
+
+.btn-nav:active {
+    border-bottom: 2px solid white;
 }
 
 .btn-nav:hover {
@@ -132,4 +146,29 @@ img {
 .footer p {
     margin: 0.5em auto;
     color: var(--main-white);
+}
+
+/* The following is for the menu module */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin: 36px 160px;
+    gap: 5px;
+}
+
+.food-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-div img {
+    width: 70%;
+    height: auto;
+    margin-left: 0;
+}
+
+.food-div p {
+    margin-top: 0.2em;
 }
