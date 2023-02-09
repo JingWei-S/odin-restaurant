@@ -1,6 +1,6 @@
 import createMenu from "./menu";
 import getHome from "./home";
-
+import getContact from "./contact";
 
 const content = document.querySelector('#content');
 // create the nav clas
@@ -47,6 +47,18 @@ nav_bar.appendChild(nav_menu);
 const nav_contact = document.createElement('button');
 nav_contact.textContent = 'Contact';
 nav_contact.classList.add('btn-nav');
+nav_contact.addEventListener("click", (e) => {
+    for (const btn of e.target.parentNode.children) {
+        if (btn === e.target) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+
+    }
+    getContact();
+    
+} );
 nav_bar.appendChild(nav_contact);
 console.log(nav_bar);
 nav.appendChild(nav_bar);
